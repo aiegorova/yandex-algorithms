@@ -3,7 +3,6 @@ package com.yandexcontest.algorithms01.triangle;
 // 1 B
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class Solution {
 
