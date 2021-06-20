@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.I_prisoner;
+package com.yandexalgorithms.algorithms01.I_prisoner;
 
 // 1 I
 

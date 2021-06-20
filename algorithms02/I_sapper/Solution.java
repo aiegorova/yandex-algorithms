@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms02.I_sapper;
+package com.yandexalgorithms.algorithms02.I_sapper;
 
 // 2 I
 

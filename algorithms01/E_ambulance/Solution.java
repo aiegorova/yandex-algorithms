@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.E_ambulance;
+package com.yandexalgorithms.algorithms01.E_ambulance;
 
 // 1 E
 

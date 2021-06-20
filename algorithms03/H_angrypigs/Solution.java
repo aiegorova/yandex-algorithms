@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms03.H_angrypigs;
+package com.yandexalgorithms.algorithms03.H_angrypigs;
 
 // 3 H
 

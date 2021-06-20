@@ -1,6 +1,6 @@
-package com.yandexcontest.firsttrial.D_brackets;
+package com.yandexalgorithms.testcontest.D_brackets;
 
-// D
+// 1 D
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.J_equationsystem;
+package com.yandexalgorithms.algorithms01.J_equationsystem;
 
 // 1 J
 

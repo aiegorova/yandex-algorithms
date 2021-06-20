@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms03.B_setintersection;
+package com.yandexalgorithms.algorithms03.B_setintersection;
 
 // 3 B
 

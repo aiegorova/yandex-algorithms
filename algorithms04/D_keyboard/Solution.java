@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms04.D_keyboard;
+package com.yandexalgorithms.algorithms04.D_keyboard;
 
 // 4 D
 

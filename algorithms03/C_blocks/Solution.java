@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms03.C_blocks;
+package com.yandexalgorithms.algorithms03.C_blocks;
 
 public class Solution {
 

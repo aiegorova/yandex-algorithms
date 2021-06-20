@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms03.D_wordstext;
+package com.yandexalgorithms.algorithms03.D_wordstext;
 
 // 3 D
 

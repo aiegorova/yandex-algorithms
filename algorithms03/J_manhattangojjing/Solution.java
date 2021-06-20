@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms03.J_manhattangojjing;
+package com.yandexalgorithms.algorithms03.J_manhattangojjing;
 
 // 3 J
 

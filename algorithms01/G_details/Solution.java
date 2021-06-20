@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.G_details;
+package com.yandexalgorithms.algorithms01.G_details;
 
 // 1 G
 

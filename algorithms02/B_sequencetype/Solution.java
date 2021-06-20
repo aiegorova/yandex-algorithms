@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms02.B_sequencetype;
+package com.yandexalgorithms.algorithms02.B_sequencetype;
 
 // 2 B
 

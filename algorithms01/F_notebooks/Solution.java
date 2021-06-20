@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.F_notebooks;
+package com.yandexalgorithms.algorithms01.F_notebooks;
 
 // 1 F
 

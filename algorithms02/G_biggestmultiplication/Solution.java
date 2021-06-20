@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms02.G_biggestmultiplication;
+package com.yandexalgorithms.algorithms02.G_biggestmultiplication;
 
 // 2 G
 

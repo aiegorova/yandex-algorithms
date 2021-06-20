@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms04.E_pyramid;
+package com.yandexalgorithms.algorithms04.E_pyramid;
 
 // 4 E
 

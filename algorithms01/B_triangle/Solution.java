@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.B_triangle;
+package com.yandexalgorithms.algorithms01.B_triangle;
 
 // 1 B
 

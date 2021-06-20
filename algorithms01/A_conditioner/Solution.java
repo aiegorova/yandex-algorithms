@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms01.A_conditioner;
+package com.yandexalgorithms.algorithms01.A_conditioner;
 
 // 1 A
 

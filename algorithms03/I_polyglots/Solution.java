@@ -1,4 +1,4 @@
-package com.yandexcontest.algorithms03.I_polyglots;
+package com.yandexalgorithms.algorithms03.I_polyglots;
 
 // 3 I
 
