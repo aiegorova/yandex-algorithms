@@ -21,13 +21,9 @@ public class Solution {
             for (int i = 0; i < n; i++) {
                 String word = reader.readLine();
                 String lowerWord = word.toLowerCase();
-                if (dict.containsKey(lowerWord))
-                    dict.get(lowerWord).add(word);
-                else {
-                    ArrayList<String> versions = new ArrayList<>();
-                    versions.add(word);
-                    dict.put(lowerWord, versions);
-                }
+                if (!dict.containsKey(lowerWord))
+                    dict.put(lowerWord, new ArrayList<>());
+                dict.get(lowerWord).add(word);
             }
 
             int mistakes = 0;
@@ -36,19 +32,19 @@ public class Solution {
 
                 if (data[i].isEmpty())
                     continue;
-                ArrayList<String> versions = dict.get(data[i].toLowerCase());
-                if (versions != null && !versions.contains(data[i])) {
+                String lowerWord = data[i].toLowerCase();
+                if (dict.containsKey(lowerWord)) {
+                    if (!dict.get(lowerWord).contains(data[i]))
+                        mistakes++;
 
-                    mistakes++;
-
-                } else if (versions == null) {
+                } else {
 
                     int amountUpper = 0;
-                    for (int j = 0; j < data[i].length(); j++) {
-                        if (data[i].charAt(j) <= 90)
+                    for (char ch : data[i].toCharArray()) {
+                        if (Character.isUpperCase(ch))
                             amountUpper++;
                     }
-                    if (amountUpper == 0 || amountUpper > 1)
+                    if (amountUpper != 1)
                         mistakes++;
 
                 }
@@ -63,3 +59,8 @@ public class Solution {
     }
 
 }
+
+/*
+После разбора:
+решено также
+ */
