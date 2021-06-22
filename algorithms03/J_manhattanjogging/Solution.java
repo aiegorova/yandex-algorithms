@@ -21,50 +21,41 @@ public class Solution {
             int d = data[1];
             int n = data[2];
 
-            ArrayList<Point> points = new ArrayList<>();
-            points.add(new Point(0, 0));
+            int upperLeft = 0;
+            int lowerLeft = 0;
+
+            int upperRight = 0;
+            int lowerRight = 0;
+
+            int lowerRightBorder = 0;
+            int upperRightBorder = 0;
+
+            int lowerLeftBorder = 0;
+            int upperLeftBorder = 0;
 
             for (int i = 0; i < n; i++) {
 
+                upperLeft = upperLeftBorder + t;
+                upperRight = upperRightBorder + t;
+                lowerLeft = lowerLeftBorder - t;
+                lowerRight = lowerRightBorder - t;
+
                 int[] coords = Arrays.stream(reader.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
 
-                int size = points.size();
-                for (int l = 0; l < size; l++) {
-                    for (int j = 0; j < t; j++) {
-                        for (int k = 1; k <= t - j; k++) {
+                lowerRightBorder = Math.max(lowerRight, coords[1] + coords[0] - d);
+                upperRightBorder = Math.min(upperRight, coords[1] + coords[0] + d);
 
-                            if (Math.abs(coords[0] - (points.get(l).x + j)) + Math.abs(coords[1] - (points.get(l).y + k)) <= d) {
-                                Point point1 = new Point(points.get(l).x + j, points.get(l).y + k);
-                                if (!points.contains(point1))
-                                    points.add(point1);
-                            }
-                            if (Math.abs(coords[0] - (points.get(l).x + k)) + Math.abs(coords[1] - (points.get(l).y - j)) <= d) {
-                                Point point2 = new Point(points.get(l).x + k, points.get(l).y - j);
-                                if (!points.contains(point2))
-                                    points.add(point2);
-                            }
-                            if (Math.abs(coords[0] - (points.get(l).x - j)) + Math.abs(coords[1] - (points.get(l).y - k)) <= d) {
-                                Point point3 = new Point(points.get(l).x - j, points.get(l).y - k);
-                                if (!points.contains(point3))
-                                    points.add(point3);
-                            }
-                            if (Math.abs(coords[0] - (points.get(l).x - k)) + Math.abs(coords[1] - (points.get(l).y + j)) <= d) {
-                                Point point4 = new Point(points.get(l).x - k, points.get(l).y + j);
-                                if (!points.contains(point4))
-                                    points.add(point4);
-                            }
+                lowerLeftBorder = Math.max(lowerLeft, coords[1] - coords[0] - d);
+                upperLeftBorder = Math.min(upperLeft, coords[1] - coords[0] + d);
 
-                        }
-                    }
+            }
 
-                    if (Math.abs(coords[0] - points.get(l).x) + Math.abs(coords[1] - points.get(l).y) > d) {
-                        points.remove(l);
-                        l--;
-                        size--;
-                    }
-
+            ArrayList<Point> points = new ArrayList<>();
+            for (int i = lowerRightBorder; i <= upperRightBorder; i++) {
+                for (int j = lowerLeftBorder; j <= upperLeftBorder; j++) {
+                    if ((i - j) % 2 == 0)
+                        points.add(new Point((i - j)/2, (i - j)/2 + j));
                 }
-
             }
 
             writer.write("" + points.size() + "\n");
@@ -79,3 +70,8 @@ public class Solution {
     }
 
 }
+
+/*
+После разбора:
+решено также
+ */
