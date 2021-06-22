@@ -4,8 +4,7 @@ package com.yandexcontest.algorithms03.C_blocks;
 
 import java.io.*;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
 
 public class Solution {
 
@@ -20,40 +19,45 @@ public class Solution {
             int n = data[0];
             int m = data[1];
 
-            Set<Integer> colors1 = new HashSet<Integer>();
-            int amount = 0;
+            ArrayList<Integer> colors1 = new ArrayList<>();
             for (int i = 0; i < n; i++) {
                 colors1.add(Integer.parseInt(reader.readLine()));
             }
+            colors1.sort((x1, x2) -> x1 - x2);
 
-            Set<Integer> colors2 = new HashSet<Integer>();
-            Set<Integer> commonColors = new HashSet<>();
+            ArrayList<Integer> colors2 = new ArrayList<>();
             for (int i = 0; i < m; i++) {
-                int currColor = Integer.parseInt(reader.readLine());
-                if (colors1.contains(currColor)) {
-                    colors1.remove(currColor);
-                    commonColors.add(currColor);
-                    amount++;
-                } else
-                    colors2.add(currColor);
+                colors2.add(Integer.parseInt(reader.readLine()));
+            }
+            colors2.sort((x1, x2) -> x1 - x2);
+
+            ArrayList<Integer> commonColors = new ArrayList<>();
+            int cnt1 = 0;
+            int cnt2 = 0;
+            while (cnt1 < colors1.size() && cnt2 < colors2.size()) {
+                if (colors1.get(cnt1) == colors2.get(cnt2)) {
+                    commonColors.add(colors1.get(cnt1));
+                    colors1.remove(cnt1);
+                    colors2.remove(cnt2);
+                } else if (colors1.get(cnt1) > colors2.get(cnt2))
+                    cnt2++;
+                else if (colors1.get(cnt1) < colors2.get(cnt2))
+                    cnt1++;
             }
 
-            Object[] commonColorsArr = commonColors.stream().sorted().toArray();
-            writer.write("" + amount + "\n");
-            for (int i = 0; i < commonColorsArr.length; i++) {
-                writer.write("" + commonColorsArr[i] + " ");
+            writer.write("" + commonColors.size() + "\n");
+            for (int i = 0; i < commonColors.size(); i++) {
+                writer.write("" + commonColors.get(i) + " ");
             }
 
-            Object[] colors1Arr = colors1.stream().sorted().toArray();
-            writer.write("\n" + (n - amount) + "\n");
-            for (int i = 0; i < colors1Arr.length; i++) {
-                writer.write("" + colors1Arr[i] + " ");
+            writer.write("\n" + colors1.size() + "\n");
+            for (int i = 0; i < colors1.size(); i++) {
+                writer.write("" + colors1.get(i) + " ");
             }
 
-            Object[] colors2Arr = colors2.stream().sorted().toArray();
-            writer.write("\n" + (m - amount) + "\n");
-            for (int i = 0; i < colors2Arr.length; i++) {
-                writer.write("" + colors2Arr[i] + " ");
+            writer.write("\n" + colors2.size() + "\n");
+            for (int i = 0; i < colors2.size(); i++) {
+                writer.write("" + colors2.get(i) + " ");
             }
 
         } catch (Exception e) {
