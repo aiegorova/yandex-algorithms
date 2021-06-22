@@ -1,4 +1,4 @@
-package com.yandexalgorithms.testcontest.G_trip;
+package com.yandexcontest.testcontest.G_trip;
 
 // 1 G
 

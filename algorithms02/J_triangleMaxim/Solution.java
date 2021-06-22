@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.J_triangleMaxim;
+package com.yandexcontest.algorithms02.J_triangleMaxim;
 
 // 2 J
 

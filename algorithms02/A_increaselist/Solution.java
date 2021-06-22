@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.A_increaselist;
+package com.yandexcontest.algorithms02.A_increaselist;
 
 // 2 A
 

@@ -1,4 +1,4 @@
-package com.yandexalgorithms.testcontest.C_dublicates;
+package com.yandexcontest.testcontest.C_dublicates;
 
 // 1 C
 

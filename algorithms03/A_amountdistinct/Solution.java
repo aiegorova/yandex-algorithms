@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms03.A_amountdistinct;
+package com.yandexcontest.algorithms03.A_amountdistinct;
 
 // 3 A
 

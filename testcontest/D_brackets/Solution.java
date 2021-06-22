@@ -1,4 +1,4 @@
-package com.yandexalgorithms.testcontest.D_brackets;
+package com.yandexcontest.testcontest.D_brackets;
 
 // 1 D
 

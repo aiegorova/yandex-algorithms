@@ -1,4 +1,4 @@
-package com.yandexalgorithms.testcontest.E_anagrams;
+package com.yandexcontest.testcontest.E_anagrams;
 
 import java.util.Arrays;
 import java.util.Scanner;

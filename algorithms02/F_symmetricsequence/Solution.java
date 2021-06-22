@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.F_symmetricsequence;
+package com.yandexcontest.algorithms02.F_symmetricsequence;
 
 // 2 F
 

@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.C_closestnumber;
+package com.yandexcontest.algorithms02.C_closestnumber;
 
 // 2 C
 

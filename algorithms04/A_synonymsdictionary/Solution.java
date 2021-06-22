@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms04.A_synonymsdictionary;
+package com.yandexcontest.algorithms04.A_synonymsdictionary;
 
 // 4 A
 

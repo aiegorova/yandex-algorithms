@@ -1,4 +1,4 @@
-package com.yandexalgorithms.testcontest.A_stones;
+package com.yandexcontest.testcontest.A_stones;
 
 // 1 A
 

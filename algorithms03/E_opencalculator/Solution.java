@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms03.E_opencalculator;
+package com.yandexcontest.algorithms03.E_opencalculator;
 
 // 3 E
 

@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms04.B_numbersearchword;
+package com.yandexcontest.algorithms04.B_numbersearchword;
 
 // 4 B
 

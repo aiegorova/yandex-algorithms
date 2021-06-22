@@ -1,4 +1,4 @@
-package com.yandexalgorithms.testcontest.B_binary;
+package com.yandexcontest.testcontest.B_binary;
 
 // 1 B
 

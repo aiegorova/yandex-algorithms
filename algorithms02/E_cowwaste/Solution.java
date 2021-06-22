@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.E_cowwaste;
+package com.yandexcontest.algorithms02.E_cowwaste;
 
 // 2 E
 

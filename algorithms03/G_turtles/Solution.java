@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms03.G_turtles;
+package com.yandexcontest.algorithms03.G_turtles;
 
 // 3 G
 
@@ -43,4 +43,7 @@ public class Solution {
 /*
 Ломалось на:
 отрицательных числах
+
+После разбора:
+решено также
  */

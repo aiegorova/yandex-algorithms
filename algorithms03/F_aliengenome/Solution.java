@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms03.F_aliengenome;
+package com.yandexcontest.algorithms03.F_aliengenome;
 
 // 3 F
 

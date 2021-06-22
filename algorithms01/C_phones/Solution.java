@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms01.C_phones;
+package com.yandexcontest.algorithms01.C_phones;
 
 // 1 C
 

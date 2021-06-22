@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms03.C_blocks;
+package com.yandexcontest.algorithms03.C_blocks;
 
 // 3 C
 

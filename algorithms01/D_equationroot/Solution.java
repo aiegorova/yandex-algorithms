@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms01.D_equationroot;
+package com.yandexcontest.algorithms01.D_equationroot;
 
 // 1 D
 

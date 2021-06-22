@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms01.H_underground;
+package com.yandexcontest.algorithms01.H_underground;
 
 // 1 H
 

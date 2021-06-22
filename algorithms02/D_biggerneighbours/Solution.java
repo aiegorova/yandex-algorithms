@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.D_biggerneighbours;
+package com.yandexcontest.algorithms02.D_biggerneighbours;
 
 // 2 D
 

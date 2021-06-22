@@ -1,4 +1,4 @@
-package com.yandexalgorithms.algorithms02.H_biggestmultiplication3;
+package com.yandexcontest.algorithms02.H_biggestmultiplication3;
 
 // 2 H
 
