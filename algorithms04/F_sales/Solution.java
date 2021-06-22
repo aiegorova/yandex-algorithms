@@ -28,9 +28,11 @@ public class Solution {
                     map.put(data[0], currData);
                 }
                 else {
-                    Long currAmount = map.get(data[0]).putIfAbsent(data[1], Long.parseLong(data[2]));
-                    if (currAmount != null)
-                        map.get(data[0]).replace(data[1], currAmount + Long.parseLong(data[2]));
+                    HashMap<String, Long> currCustomer = map.get(data[0]);
+                    if (!currCustomer.containsKey(data[1]))
+                        currCustomer.put(data[1], Long.parseLong(data[2]));
+                    else
+                        currCustomer.replace(data[1], currCustomer.get(data[1]) + Long.parseLong(data[2]));
                 }
 
             }
