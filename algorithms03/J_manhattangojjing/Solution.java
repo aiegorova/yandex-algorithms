@@ -33,34 +33,36 @@ public class Solution {
                     for (int j = 0; j < t; j++) {
                         for (int k = 1; k <= t - j; k++) {
 
-                            Point point1 = new Point(points.get(l).x + j, points.get(l).y + k);
-                            if (!points.contains(point1))
-                                points.add(point1);
-
-
-                            Point point2 = new Point(points.get(l).x + k, points.get(l).y - j);
-                            if (!points.contains(point2))
-                                points.add(point2);
-
-
-                            Point point3 = new Point(points.get(l).x - j, points.get(l).y - k);
-                            if (!points.contains(point3))
-                                points.add(point3);
-
-
-                            Point point4 = new Point(points.get(l).x - k, points.get(l).y + j);
-                            if (!points.contains(point4))
-                                points.add(point4);
+                            if (Math.abs(coords[0] - (points.get(l).x + j)) + Math.abs(coords[1] - (points.get(l).y + k)) <= d) {
+                                Point point1 = new Point(points.get(l).x + j, points.get(l).y + k);
+                                if (!points.contains(point1))
+                                    points.add(point1);
+                            }
+                            if (Math.abs(coords[0] - (points.get(l).x + k)) + Math.abs(coords[1] - (points.get(l).y - j)) <= d) {
+                                Point point2 = new Point(points.get(l).x + k, points.get(l).y - j);
+                                if (!points.contains(point2))
+                                    points.add(point2);
+                            }
+                            if (Math.abs(coords[0] - (points.get(l).x - j)) + Math.abs(coords[1] - (points.get(l).y - k)) <= d) {
+                                Point point3 = new Point(points.get(l).x - j, points.get(l).y - k);
+                                if (!points.contains(point3))
+                                    points.add(point3);
+                            }
+                            if (Math.abs(coords[0] - (points.get(l).x - k)) + Math.abs(coords[1] - (points.get(l).y + j)) <= d) {
+                                Point point4 = new Point(points.get(l).x - k, points.get(l).y + j);
+                                if (!points.contains(point4))
+                                    points.add(point4);
+                            }
 
                         }
                     }
-                }
 
-                for (int j = 0; j < points.size(); j++) {
-                    if (Math.abs(coords[0] - points.get(j).x) + Math.abs(coords[1] - points.get(j).y) > d) {
-                        points.remove(j);
-                        j--;
+                    if (Math.abs(coords[0] - points.get(l).x) + Math.abs(coords[1] - points.get(l).y) > d) {
+                        points.remove(l);
+                        l--;
+                        size--;
                     }
+
                 }
 
             }
