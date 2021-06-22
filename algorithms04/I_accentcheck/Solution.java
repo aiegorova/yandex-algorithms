@@ -34,6 +34,8 @@ public class Solution {
             String[] data = reader.readLine().split(" ");
             for (int i = 0; i < data.length; i++) {
 
+                if (data[i].isEmpty())
+                    continue;
                 ArrayList<String> versions = dict.get(data[i].toLowerCase());
                 if (versions != null && !versions.contains(data[i])) {
 
