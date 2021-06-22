@@ -4,7 +4,9 @@ package com.yandexcontest.algorithms03.C_blocks;
 
 import java.io.*;
 import java.util.Arrays;
-import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.stream.Collectors;
 
 public class Solution {
 
@@ -19,45 +21,41 @@ public class Solution {
             int n = data[0];
             int m = data[1];
 
-            ArrayList<Integer> colors1 = new ArrayList<>();
+            Set<Integer> colors1 = new HashSet<>();
             for (int i = 0; i < n; i++) {
                 colors1.add(Integer.parseInt(reader.readLine()));
             }
-            colors1.sort((x1, x2) -> x1 - x2);
 
-            ArrayList<Integer> colors2 = new ArrayList<>();
+            Set<Integer> colors2 = new HashSet<>();
             for (int i = 0; i < m; i++) {
                 colors2.add(Integer.parseInt(reader.readLine()));
             }
-            colors2.sort((x1, x2) -> x1 - x2);
 
-            ArrayList<Integer> commonColors = new ArrayList<>();
-            int cnt1 = 0;
-            int cnt2 = 0;
-            while (cnt1 < colors1.size() && cnt2 < colors2.size()) {
-                if (colors1.get(cnt1) == colors2.get(cnt2)) {
-                    commonColors.add(colors1.get(cnt1));
-                    colors1.remove(cnt1);
-                    colors2.remove(cnt2);
-                } else if (colors1.get(cnt1) > colors2.get(cnt2))
-                    cnt2++;
-                else if (colors1.get(cnt1) < colors2.get(cnt2))
-                    cnt1++;
+            Set<Integer> result = new HashSet<>();
+            result.addAll(colors1);
+            result.retainAll(colors2);
+            result = result.stream().sorted().collect(Collectors.toSet());
+            writer.write("" + result.size() + "\n");
+            for (Integer value : result) {
+                writer.write("" + value + " ");
             }
 
-            writer.write("" + commonColors.size() + "\n");
-            for (int i = 0; i < commonColors.size(); i++) {
-                writer.write("" + commonColors.get(i) + " ");
+            result.clear();
+            result.addAll(colors1);
+            result.removeAll(colors2);
+            result = result.stream().sorted().collect(Collectors.toSet());
+            writer.write("\n" + result.size() + "\n");
+            for (Integer value :  result) {
+                writer.write("" + value + " ");
             }
 
-            writer.write("\n" + colors1.size() + "\n");
-            for (int i = 0; i < colors1.size(); i++) {
-                writer.write("" + colors1.get(i) + " ");
-            }
-
-            writer.write("\n" + colors2.size() + "\n");
-            for (int i = 0; i < colors2.size(); i++) {
-                writer.write("" + colors2.get(i) + " ");
+            result.clear();
+            result.addAll(colors2);
+            result.removeAll(colors1);
+            result = result.stream().sorted().collect(Collectors.toSet());
+            writer.write("\n" + result.size() + "\n");
+            for (Integer value : result) {
+                writer.write("" + value + " ");
             }
 
         } catch (Exception e) {
